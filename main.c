@@ -217,8 +217,6 @@ int main(void)
   // Left split
   {
     UIPanel *panel = UIPanelCreate(&split->e, UI_PANEL_GRAY | UI_PANEL_MEDIUM_SPACING);
-    buttonClear = UIButtonCreate(&panel->e, 0, "Clear", -1);
-    buttonClear->e.messageUser = ButtonMessageClear;
     
     colorPicker = UIColorPickerCreate(&panel->e, 0);
     colorPicker->saturation = 0;
@@ -228,6 +226,9 @@ int main(void)
     buttonLevel = UIButtonCreate(&panel->e, 0, "Layer 0", -1);
     buttonLevel->e.messageUser = ButtonMessageLevel;
 
+    buttonClear = UIButtonCreate(&panel->e, 0, "Clear", -1);
+    buttonClear->e.messageUser = ButtonMessageClear;
+    
     buttonQuit = UIButtonCreate(&panel->e, 0, "Quit", -1);
     buttonQuit->e.messageUser = ButtonMessageQuit;
   }
