@@ -2,3 +2,5 @@
 
 Simple drawing tool
 
+![screenshot](./screenshot.png)
+
